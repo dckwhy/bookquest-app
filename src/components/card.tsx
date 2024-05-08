@@ -12,7 +12,13 @@ const Card = (props: BookCardProps) => {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <Link to={navigate}>
-        <img className="rounded-t-lg" src={data.cover_image} alt={data.title} />
+        <img
+          className="rounded-t-lg"
+          src={data.cover_image}
+          alt={data.title}
+          width={250}
+          height={330}
+        />
       </Link>
       <div className="p-5">
         <Link to={navigate}>

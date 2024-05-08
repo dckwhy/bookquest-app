@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/App.css";
+import { Link } from "react-router-dom";
+
 import Layout from "../components/layout";
 import Card from "../components/card";
 import RiveWrapper from "../components/rive";
@@ -63,6 +65,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="flex justify-between my-9 w-full h-fit items-center">
+        <p className="font-semibold text-lg tracking-wider">
+          New Release Books
+        </p>
+        <Link
+          className="text-sm tracking-wide"
+          to="/books?sort=new"
+          data-testid="to-books-by-new"
+        >
+          Show all
+        </Link>
+      </div>
       <div className="relative w-full h-fit">
         <div className="flex space-x-4 pb-4">
           {newBooks.map((book) => (

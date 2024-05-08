@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "../pages";
 import LoginPage from "../pages/auth/login";
 import RegisterPage from "../pages/auth/register";
+import BooksPage from "../pages/books/index";
 import DetailBookPage from "../pages/books/detail";
 
 const App = () => {
@@ -20,6 +21,10 @@ const App = () => {
         {
           path: "/register",
           element: <RegisterPage />,
+        },
+        {
+          path: "/books",
+          element: <BooksPage />,
         },
         {
           path: "/books/:id_book",
