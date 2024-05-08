@@ -11,15 +11,15 @@ const Card = (props: BookCardProps) => {
   const { data, navigate } = props;
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
+      <Link to={navigate}>
         <img className="rounded-t-lg" src={data.cover_image} alt={data.title} />
-      </a>
+      </Link>
       <div className="p-5">
-        <a href="#">
+        <Link to={navigate}>
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {data.title}
           </h5>
-        </a>
+        </Link>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {data.author}
         </p>

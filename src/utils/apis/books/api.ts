@@ -26,3 +26,15 @@ export const getBooks = async (params?: Request) => {
     throw Error(error.response.data.message);
   }
 };
+
+export const getDetailBook = async (id_book: string) => {
+  try {
+    const response = await fetch(
+      `https://hells-kitchen.onrender.com/api/v1/books/${id_book}`
+    );
+
+    return response.json();
+  } catch (error: any) {
+    throw Error(error.response.data.message);
+  }
+};

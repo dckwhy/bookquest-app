@@ -66,7 +66,11 @@ const Home = () => {
       <div className="relative w-full h-fit">
         <div className="flex space-x-4 pb-4">
           {newBooks.map((book) => (
-            <Card key={book.id} data={book} navigate={""}></Card>
+            <Card
+              key={book.id}
+              data={book}
+              navigate={`/books/${book.id}`}
+            ></Card>
           ))}
         </div>
       </div>

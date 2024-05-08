@@ -1,5 +1,5 @@
-import { getBooks } from "./api";
+import { getBooks, getDetailBook } from "./api";
 import { Book } from "./type";
 
-export { getBooks };
+export { getBooks, getDetailBook };
 export type { Book };
